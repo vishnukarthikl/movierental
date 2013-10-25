@@ -19,4 +19,12 @@ public class Movie {
     public MovieType getMovieType() {
         return movieType;
     }
+
+    public double getCharge(int daysRented) {
+        return movieType.calculateCharge(daysRented);
+    }
+
+    public int getFrequentRenterPoints(int daysRented) {
+        return movieType.calculateFrequentRenterPoints(daysRented);
+    }
 }

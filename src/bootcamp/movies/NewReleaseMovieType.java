@@ -4,11 +4,6 @@ public class NewReleaseMovieType extends MovieType {
     public static final double RENTAL_RATE = 3;
 
     @Override
-    public double calculateCharge(int rentedDays) {
-        return rentedDays * RENTAL_RATE;
-    }
-
-    @Override
     public int calculateFrequentRenterPoints(int rentedDays) {
         return super.calculateFrequentRenterPoints(rentedDays) + (rentedDays > 1 ? 1 : 0);
     }
